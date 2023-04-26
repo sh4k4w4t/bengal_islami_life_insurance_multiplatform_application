@@ -15,9 +15,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _controller= PageController();
+  final _controller = PageController();
   @override
-  void dispose(){
+  void dispose() {
     _controller.dispose();
     super.dispose();
   }
@@ -25,14 +25,32 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Bengal Islami Life Insurance Ltd",style: TextStyle(fontWeight: FontWeight.bold),),),
+      appBar: AppBar(
+        title: Text("Bengal Islami Life Insurance Ltd",
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+        // centerTitle: true,
+        backgroundColor: Colors.green[900],
+        actions: [
+          IconButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text("You have been Logout."),
+                  action: SnackBarAction(
+                      label: "Login Again",
+                      onPressed: () {
+                        print("Login again in here");
+                      }),
+                ));
+              },
+              icon: Icon(
+                Icons.login,
+                color: Colors.white,
+              ))
+        ],
+      ),
       body: PageView(
         controller: _controller,
-        children: <Widget>[
-          HomeSection(),
-          ServiceSection(),
-          ProfileSection()
-        ],
+        children: <Widget>[HomeSection(), ServiceSection(), ProfileSection()],
       ),
       extendBody: true,
       bottomNavigationBar: RollingBottomBar(
@@ -41,38 +59,23 @@ class _HomePageState extends State<HomePage> {
         flat: true,
         useActiveColorByDefault: false,
         items: [
-          RollingBottomBarItem(Icons.home, label: 'Home', activeColor: Colors.green[800]),
-          RollingBottomBarItem(Icons.star, label: 'Services', activeColor: Colors.green[800]),
-          RollingBottomBarItem(Icons.person, label: 'Profile', activeColor: Colors.green[800]),
+          RollingBottomBarItem(Icons.home,
+              label: 'Home', activeColor: Colors.green[800]),
+          RollingBottomBarItem(Icons.star,
+              label: 'Services', activeColor: Colors.green[800]),
+          RollingBottomBarItem(Icons.person,
+              label: 'Profile', activeColor: Colors.green[800]),
         ],
         enableIconRotation: true,
-        onTap: (index){
-          _controller.animateToPage(index, duration: const Duration(milliseconds: 400), curve: Curves.easeOut);
+        onTap: (index) {
+          _controller.animateToPage(index,
+              duration: const Duration(milliseconds: 400),
+              curve: Curves.easeOut);
         },
       ),
     );
-
-
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // class HomePage extends StatefulWidget {
 //   const HomePage({Key? key}) : super(key: key);
@@ -141,5 +144,3 @@ class _HomePageState extends State<HomePage> {
 //     );
 //   }
 // }
-
-
