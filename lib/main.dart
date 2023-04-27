@@ -1,5 +1,6 @@
-import 'package:bengal_islami_life_insurance/home/homepage.dart';
 import 'package:flutter/material.dart';
+
+import 'UI/home/homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green,),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white,),
         useMaterial3: true,
       ),
       home: HomePage(),
