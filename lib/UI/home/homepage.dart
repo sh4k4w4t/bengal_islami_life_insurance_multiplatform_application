@@ -24,19 +24,19 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.green[800],
-      //   title: Text('Bengal Islami Life Insuranc Ltd.',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
-      //   actions: [
-      //     IconButton(onPressed: (){},
-      //         icon: Icon(Icons.person),color: Colors.white,),
-      //     IconButton(onPressed: (){},
-      //         icon: Icon(Icons.menu_open_rounded),color: Colors.white,),
-      //   ],
-      // ),
       appBar: AppBar(
         backgroundColor: Colors.green[800],
         title: Text('Bengal Islami Life Insuranc Ltd.',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
+
+        actions: [
+          Builder(
+            builder: (context) => IconButton(
+              icon: Icon(Icons.add,color: Colors.white,),
+              onPressed: () => Scaffold.of(context).openEndDrawer(),
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            ),
+          ),
+        ],
       ),
       endDrawer: Drawer(
         child: ListView(
