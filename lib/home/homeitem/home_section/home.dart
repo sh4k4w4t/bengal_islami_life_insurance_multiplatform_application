@@ -11,10 +11,10 @@ class _HomeSectionState extends State<HomeSection> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            Text(" Home Page")
+
           ],
         ),
       ),

@@ -25,7 +25,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bengal Islami Life Insuranc Ltd.',style: TextStyle(fontWeight: FontWeight.bold),),
+        backgroundColor: Colors.green[800],
+        title: Text('Bengal Islami Life Insuranc Ltd.',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
+        actions: [
+          IconButton(onPressed: (){},
+              icon: Icon(Icons.person),color: Colors.white,)
+        ],
       ),
       body: Center(
         child: tabItems[_selectedIndex],
