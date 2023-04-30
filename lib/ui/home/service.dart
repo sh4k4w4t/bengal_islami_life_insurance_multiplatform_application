@@ -88,15 +88,6 @@ class LisTileExample extends StatelessWidget {
               },
             ),
           ),
-          Card(
-            child: ListTile(
-              leading: FlutterLogo(),
-              title: Text('Logout'),
-              onTap: () {
-                //add tap operations
-              },
-            ),
-          ),
         ],
       ),
     );
