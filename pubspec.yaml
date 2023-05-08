@@ -39,10 +39,7 @@ dependencies:
   ionicons: ^0.2.2
   http: ^0.13.5
   intl: ^0.18.1
-  flashy_tab_bar2: ^0.0.5
   shared_preferences: ^2.1.0
-  flutter_native_splash: ^2.2.19
-  carousel_slider: ^4.2.1
   fluttertoast: ^8.2.1
   open_store: ^0.5.0
   url_launcher: ^6.1.10
@@ -52,16 +49,7 @@ dependencies:
   upgrader: ^5.0.0
   flutter_html: ^3.0.0-alpha.6
   flutter_svg: ^1.1.5
-
-
-flutter_native_splash:
-  android: true
-  ios: true
-  web: false
-#  color: "#42a5f5"
-  background_image: "assets/splash/splash_screen.png"
-#  image: "assets/splash/splash_screen.png"
-
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:

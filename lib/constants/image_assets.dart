@@ -1,5 +1,5 @@
-class ImageAssets{
+class ImageAssets {
   const ImageAssets._();
 
-  // static const splashScreen = "assets/logo/navbar_banner.png";
+  static const splashScreen = "assets/splash/splash_screen.png";
 }
