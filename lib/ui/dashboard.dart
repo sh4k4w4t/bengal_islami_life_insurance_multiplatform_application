@@ -1,5 +1,7 @@
+import 'package:bengal_islami_life_insurance/ui/all_plans.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -68,78 +70,80 @@ class _DashboardState extends State<Dashboard> {
                 children: [
                   GestureDetector(
                     onTap: () {},
-                    child: itemDashboard(
-                        "Earning", CupertinoIcons.hourglass, Colors.green),
+                    child: itemDashboard("Earning",
+                        CupertinoIcons.money_dollar_circle, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
                     child: itemDashboard("Business Report",
-                        CupertinoIcons.hourglass, Colors.green),
+                        CupertinoIcons.hourglass, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
-                    child: itemDashboard(
-                        "Top Producer", CupertinoIcons.hourglass, Colors.green),
+                    child: itemDashboard("Top Producer",
+                        CupertinoIcons.hourglass, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
-                    child: itemDashboard(
-                        "Policy List", CupertinoIcons.hourglass, Colors.green),
+                    child: itemDashboard("Policy List",
+                        CupertinoIcons.hourglass, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
                     child: itemDashboard("Policy Statement",
-                        CupertinoIcons.hourglass, Colors.green),
+                        Icons.policy_rounded, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
                     child: itemDashboard("Proposal List",
-                        CupertinoIcons.hourglass, Colors.green),
+                        CupertinoIcons.hourglass, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
                     child: itemDashboard("Proposal status & payment",
-                        CupertinoIcons.hourglass, Colors.green),
+                        CupertinoIcons.hourglass, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
-                    child: itemDashboard(
-                        "Chain Setup", CupertinoIcons.hourglass, Colors.green),
+                    child: itemDashboard("Chain Setup",
+                        CupertinoIcons.hourglass, Colors.green[900]!),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Get.to(IndividualPlans());
+                    },
+                    child: itemDashboard("All Plans",
+                        Icons.production_quantity_limits, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
-                    child: itemDashboard(
-                        "All Plans", CupertinoIcons.hourglass, Colors.green),
-                  ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: itemDashboard(
-                        "Pay Premium", CupertinoIcons.hourglass, Colors.green),
+                    child: itemDashboard("Pay Premium",
+                        Icons.attach_money_rounded, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
                     child: itemDashboard("Premium Calculator",
-                        CupertinoIcons.hourglass, Colors.green),
+                        Icons.calculate_outlined, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
                     child: itemDashboard("Branch Office",
-                        CupertinoIcons.hourglass, Colors.green),
+                        CupertinoIcons.hourglass, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
                     child: itemDashboard("Network Hospital",
-                        CupertinoIcons.hourglass, Colors.green),
+                        CupertinoIcons.hourglass, Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
-                    child: itemDashboard(
-                        "Contact Us", CupertinoIcons.hourglass, Colors.green),
+                    child: itemDashboard("Contact Us", CupertinoIcons.hourglass,
+                        Colors.green[900]!),
                   ),
                   GestureDetector(
                     onTap: () {},
-                    child: itemDashboard(
-                        "All Setting", CupertinoIcons.hourglass, Colors.green),
+                    child: itemDashboard("All Setting",
+                        CupertinoIcons.hourglass, Colors.green[900]!),
                   ),
                 ],
               ),
@@ -172,7 +176,8 @@ class _DashboardState extends State<Dashboard> {
                 child: Icon(iconData, color: Colors.white)),
             const SizedBox(height: 8),
             Text(
-              title.toUpperCase(),
+              title,
+              textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleSmall,
             )
           ],
