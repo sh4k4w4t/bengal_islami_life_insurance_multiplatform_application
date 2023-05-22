@@ -35,7 +35,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                margin: EdgeInsets.only(left: 20, right: 20, top: 40),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
