@@ -4,7 +4,7 @@ import 'package:bengal_islami_life_insurance/ui/login_register/register.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../dashboard.dart';
+import '../dashboard/dashboard.dart';
 
 class IMSLogin extends StatefulWidget {
   const IMSLogin({Key? key}) : super(key: key);

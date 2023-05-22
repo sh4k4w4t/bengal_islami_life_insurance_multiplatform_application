@@ -10,6 +10,17 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  List<DropdownMenuItem<String>> get dropdownDesignationItems {
+    List<DropdownMenuItem<String>> menuItems = [
+      DropdownMenuItem(child: Text("Producer"), value: "Producer"),
+      DropdownMenuItem(child: Text("Policy Holder"), value: "Policy Holder"),
+      DropdownMenuItem(child: Text("Admin"), value: "Admin")
+    ];
+    return menuItems;
+  }
+
+  String? selectedValue;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.only(top: 15),
+                padding: EdgeInsets.only(top: 8),
                 child: Text(
                   'Create Account',
                   textAlign: TextAlign.center,
@@ -35,10 +46,32 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 20, right: 20, top: 40),
+                margin: EdgeInsets.only(left: 20, right: 20, top: 30),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    DropdownButtonFormField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.black),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.black),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          filled: true,
+                          fillColor: Colors.white,
+                        ),
+                        dropdownColor: Colors.white,
+                        value: selectedValue,
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            selectedValue = newValue!;
+                          });
+                        },
+                        items: dropdownDesignationItems),
+                    SizedBox(height: 10),
                     CustomTextField(
                         hintText: "Email Address",
                         obsecureText: false,

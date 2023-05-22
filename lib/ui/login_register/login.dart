@@ -1,5 +1,5 @@
 import 'package:bengal_islami_life_insurance/constants/image_assets.dart';
-import 'package:bengal_islami_life_insurance/ui/dashboard.dart';
+import 'package:bengal_islami_life_insurance/ui/dashboard/dashboard.dart';
 import 'package:bengal_islami_life_insurance/ui/login_register/ims_login.dart';
 import 'package:bengal_islami_life_insurance/ui/login_register/register.dart';
 import 'package:flutter/cupertino.dart';
