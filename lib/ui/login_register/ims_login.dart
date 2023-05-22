@@ -37,7 +37,7 @@ class _IMSLoginState extends State<IMSLogin> {
             SingleChildScrollView(
               child: Container(
                 padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.4),
+                    top: MediaQuery.of(context).size.height * 0.3),
                 margin: EdgeInsets.only(left: 25, right: 25),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
