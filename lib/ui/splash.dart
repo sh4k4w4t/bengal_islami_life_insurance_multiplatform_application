@@ -1,5 +1,5 @@
 import 'package:bengal_islami_life_insurance/constants/image_assets.dart';
-import 'package:bengal_islami_life_insurance/ui/dashboard.dart';
+import 'package:bengal_islami_life_insurance/ui/login_register/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,7 +15,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 3), () {
-      Get.to(Dashboard());
+      Get.to(LoginPage());
     });
   }
 
